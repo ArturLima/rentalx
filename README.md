@@ -1,4 +1,4 @@
 # rentalx
 ---------WIP----------
 
-Creating with typescript a car registration backend
+Creating with typescript a scheduling car backend
