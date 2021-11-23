@@ -11,11 +11,11 @@ interface IRequest {
   car_id: string;
   expected_return_date: Date;
 }
-//@injectable()
+@injectable()
 class CreateRentalUseCase {
   constructor(
-    /* @inject("") */ private rentalsRepository: IRentalsRepository,
-    /* @inject("") */ private dateProvider: IDateProvider
+    @inject("RentalRepository") private rentalsRepository: IRentalsRepository,
+    @inject("DayjsDateProvider") private dateProvider: IDateProvider
   ) {}
   async execute({
     user_id,
