@@ -23,7 +23,7 @@ class S3StorageProvider implements IStorageProvider {
 
     await this.client
       .putObject({
-        Bucket: `api-rentx-artur/${folder}`,
+        Bucket: `${process.env.AWS_BUCKET}/${folder}`,
         Key: file,
         ACL: "public-read",
         Body: fileContent,
